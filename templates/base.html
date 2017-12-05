@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/app01base.css">
+</head>
+
+<body>
+<div class="pg-header" style="position: fixed;top: 0;left: 0 ;right: 0;bottom: 0;border-bottom:1px solid #e4e4e4; ">
+    <div class="pg-width pg-header">
+        <div class="pg-nv logo left">知乎</div>
+        <a href="/zhihu/index/"><div class="pg-nv left" style="color: black">首页</div></a>
+        <div class="pg-nv left">发现</div>
+        <div class="pg-nv left">话题</div>
+        {% if user.email %}
+        <div class="pg-nv right" id="user" style="position: relative;">{{ user.email }}
+
+            <div class="right bcolor-white user-i" id="user-i">
+                <div class="user-i-item">我的主页</div>
+                <div class="user-i-item">设置</div>
+                <a href="/zhihu/out/"><div class="user-i-item">退出</div></a>
+            </div>
+        </div>
+        {% else %}
+
+        <a href="/zhihu/login/"><div class="pg-nv right" id="user" style="position: relative;">登录</div></a>
+        {% endif %}
+        <div class="pg-nv right"><i class="fa fa-comments fa1" aria-hidden="true"></i></div>
+        <div class="pg-nv right"><i class="fa fa-bell" aria-hidden="true"></i></div>
+
+        <div style="clear: both"></div>
+
+    </div>
+
+</div>
+
+{% block content %}
+
+{% endblock %}
+<script src="/static/jquery-1.12.4.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+{% block script %}
+    <script>
+        $('#user').click(function () {
+            $('#user-i').removeClass('hide')
+        })
+    </script>
+{% endblock %}
+</body>
+
+</html>

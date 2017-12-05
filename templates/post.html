@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="pg-width ccc">
+        <div class="left-content">
+            <div class="left-content-header bcolor-white">
+                <a href="/zhihu/edit_post/"><div class="pg-nv left" style="color: black">提问</div></a>
+                <div class="pg-nv left">回答</div>
+                <div class="pg-nv left">写文章</div>
+                <div class="pg-nv left">写想法</div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="content bcolor-white">
+                <div>提问者：{{ post.u__email }}</div>
+                <div style="font-size: 20px"><a href="/zhihu/post/?nid={{ post.id }}">标题：{{ post.title}}</a></div>
+                <div>内容：{{ post.body }}</div>
+                <div><img src="/static/image/d.jpg"></div>
+
+            </div>
+            <div style="margin: 20px 0">
+                <form method="post" action="/zhihu/post/">
+                    <input type="text" name="nid" value="{{ post.id }}" style="display: none">
+                    <input type="text" name="uid" value="{{ user.id }}" style="display: none">
+                    <input type="text" name="body" placeholder="评论">
+                    <input type="submit" value="提交">
+                </form>
+            </div>
+            {% for c in comments %}
+                <div class="bcolor-white" style="margin: 10px 0;border: 1px solid #e4e4e4;">
+                    <div style="margin: 20px">回答者：{{ c.u__email }}</div>
+                    <div style="margin: 20px">内容：{{ c.body }}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}

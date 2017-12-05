@@ -1,0 +1,97 @@
+
+body{
+    margin: 0;
+    background-color: #f3f3f3;
+}
+.hide{
+    display: none;
+}
+.pg-header{
+    background-color: white;
+    height: 50px;
+    border-bottom:1px solid #e4e4e4;
+}
+.pg-width{
+    width: 1020px;margin: 0 auto;
+}
+.bcolor-white{
+   background-color: white;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.pg-nv{
+    padding: 14px 20px;
+    font-size: 16px;
+    color: #b3b3b3;
+    cursor: pointer;
+
+}
+.pg-nv:hover{
+    background-color: #fbfbfb;
+}
+.logo{
+    float: left;
+    padding: 4px 0;
+    color:#0f88eb;
+    font-size: 30px
+}
+.ccc{
+    margin-top: 10px;
+}
+.left-content{
+    margin-top: 50px;
+    width: 690px;
+    margin-right: 10px;
+    float: left;
+}
+.right-content{
+    margin-top: 50px;
+    width: 300px;
+    float: left;
+}
+.left-content-header{
+   border: 1px solid #e4e4e4;
+}
+.content{
+    margin-top: 10px;
+    border: 1px solid #e4e4e4;
+}
+.right-content-a{
+    /*border: 1px solid #e4e4e4;*/
+    height: 160px;
+}
+.right-content-b{
+    margin-top: 10px;
+    /*border: 1px solid #e4e4e4;*/
+    height: 160px;
+}
+.user-i{
+    min-width: 100px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+.user-i-item{
+    height: 36px;
+    line-height: 36px;
+    color: #262626;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.user-i-item:hover{
+    background-color: #fbfbfb;
+}
+#user:hover .user-i{
+    display: block;
+}
+
+.content div{
+    margin: 20px;
+}

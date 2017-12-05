@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="pg-width ccc ">
+
+        <div class="left-content">
+            <div class="left-content-header bcolor-white">
+                <a href="/zhihu/edit_post/"><div class="pg-nv left" style="color: black">提问</div></a>
+                <div class="pg-nv left">回答</div>
+                <div class="pg-nv left">写文章</div>
+                <div class="pg-nv left">写想法</div>
+
+                <div style="clear: both"></div>
+            </div>
+            {% for post in posts %}
+                <div class="content bcolor-white">
+                    <div>提问者：{{ post.u__email }}</div>
+                    <div style="font-size: 20px"><a href="/zhihu/post/?nid={{ post.id }}">标题：{{ post.title}}</a></div>
+                    <div>内容：{{ post.body }}</div>
+                    <div><img src="/static/image/c.jpg"></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="right-content">
+            <div class="right-content-a bcolor-white" ><img src="/static/image/a.jpg"></div>
+            <div class="right-content-b bcolor-white" ><img  src="/static/image/b.jpg"></div>
+        </div>
+    </div>
+
+{% endblock %}

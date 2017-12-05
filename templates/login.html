@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        .index-back{
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #f7fafc;
+            text-align: center;
+
+        }
+        .logo{
+            margin-top: 0;
+            padding-top: 50px;
+            font-size: 70px;
+            color: #0f88eb;
+            margin-bottom: -10px;
+        }
+        @media (max-width:750px ) {
+            .hide-text{
+                font-size: 50px;
+                padding-top: 20px;
+            }
+        }
+        .subtitle{
+            margin: 20px 0 20px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1;
+        }
+        .index-main-body{
+            padding: 0;
+            min-height: 590px;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+            margin: auto;
+            width: 300px;
+            text-align: center;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+            background: #f7fafc;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+        .index-header-bottom{
+            text-align: center;
+            display: block;
+            white-space: normal;
+        }
+        .index-tab-navs{
+            color: #0f88eb;
+            opacity: 1;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .group-inputs{
+            font-size: 100%;
+            border-radius: 0;
+            background: #fff;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: start;
+
+        }
+        .group-inputs input{
+            padding: 10px 15px;
+            width: 270px;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            height:26px;
+        }
+        .button-wrapper button{
+            cursor: pointer;
+            height:42px;
+            width: 300px;
+            background-color:#0f88eb ;
+            border: 0;
+            border-radius: 2%;
+            margin-top: 20px;
+            color: white;
+            font-size: 15px;
+        }
+        .agreement-tip{
+            color: #999;
+            margin-top: 21px;
+            font-size: 13px;
+        }
+        .signup-entry--org{
+            display: inline-block;
+            margin-top: 5px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 500;
+            color: #0f88eb;
+            margin-bottom: 20px;
+        }
+        .QRCode-toggleButton {
+            display: block;
+            padding: 0;
+            width: 100%;
+            height: 41px;
+            line-height: 39px;
+            color: #5fa6e5;
+            background: 0 0;
+            border: 1px solid #96c2e9;
+            border-radius: 3px;
+            cursor: pointer;
+            outline: 0;
+        }
+        .footer{
+            margin-top: 70px;
+            font-size: 12px;
+            line-height: 21px;
+            text-align: center;
+            color: #aebdc9;
+
+        }
+        .footer a{
+            color: #aebdc9;
+        }
+        .chengxing{
+            border-top: #ebeef0 1px solid;
+            width: 420px;
+            margin: 10px auto;
+            padding-top: 10px;
+        }
+        .FeedbackButton-button-3waL{
+            position: fixed;
+            z-index: 8;
+            bottom: 40px;
+            right: 40px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0,0,0,.15);
+            font-weight: 700;
+            line-height: normal;
+        }
+        .fa1{
+            font-size: 20px;
+            color: #0f88eb ;
+        }
+        .fa1:hover{
+            font-size: 30px;
+            color: #0574d0 ;
+        }
+        .hide{display: none}
+        .hide-page{
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: black;
+            z-index: 10;
+            position: fixed;
+            opacity: 0.7;
+        }
+        .hide-index{
+            width: 640px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -300px;
+            z-index: 11;
+        }
+        .hide-index-cancel{
+            float: left;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 40px;
+        }
+        .fa2{
+            color: white;
+        }
+        .FeedbackForm {
+            float: left;
+            width: 542px;
+            background-color: white;
+            height: 528px;
+            overflow: auto;
+            padding: 40px 24px 32px;
+        }
+        .FeedbackForm-title {
+            height: 38px;
+            color: black;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 33px;
+        }
+        .FeedbackForm-inputBox-15yJ {
+            display: block;
+            padding: 12px;
+            width: 100%;
+            height: auto;
+            font-size: 15px;
+            border: 1px solid #e7eaf1;
+            border-radius: 3px;
+            box-sizing: border-box;
+            resize: none;
+            outline: none;
+            color: inherit;
+            transition: box-shadow .15s ease-out;
+            overflow: auto;
+            margin-top: 25px}
+        .FeedbackForm-screenShotLabel-2Sgh{
+            padding-top: 25px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .FeedbackForm-canvasContainer-mrde {
+            margin-top: 8px;
+            position: relative;
+            background-color: #f6f7f9;
+        }
+    </style>
+</head>
+<body style="margin: 0 auto">
+
+<div class="index-back">
+    <div class="index-main-body">
+        <div class="index-header">
+            <h1 class="logo hide-text">知乎</h1>
+            <h2 class="subtitle">与世界分享你的知识、经验和见解</h2>
+        </div>
+        <div class="index-header-bottom">
+            <div class="index-tab-navs">
+                <div class="navs-slider" data-active-index="0">
+                    <a href="#signup" class="active">注册</a>
+                    <a href="#signin" class="login">登录</a>
+                    <span class="navs-slider-bar"></span>
+                </div>
+            </div>
+        </div>
+        <div class="view-signup">
+            <form id="registration" method="post" name="form_registration">
+                <div class="group-inputs">
+
+                    <div><input style="border-top:1px solid #e0e0e0 " type="text" placeholder="姓名" required name="username"></div>
+                    <div><input type="text" placeholder="邮箱" required name="email"></div>
+                    <div><input type="text" placeholder="密码（不少于6位）" required name="password"></div>
+
+                </div>
+
+                <div class="button-wrapper">
+                    <button class="sign-button submit" type="submit">注册知乎</button>
+                </div>
+            </form>
+            <p class="agreement-tip">点击「注册」按钮，即代表你同意<a href="https://www.zhihu.com/terms" target="_blank">《知乎协议》</a></p>
+            <a class="signup-entry--org" href="https://www.zhihu.com/org/signup">注册机构号</a>
+            <button class="QRCode-toggleButton">
+                <span class="QRCode-toggleButtonText ">下载知乎 App</span>
+            </button>
+        </div>
+        <div class="view-signup-b hide">
+            <form id="login" method="post" name="form_login">
+                <div class="group-inputs">
+                    <div><input style="border-top:1px solid #e0e0e0 " type="text" placeholder="邮箱" required name="email_b"></div>
+                    <div><input type="text" placeholder="密码" required name="password_b"></div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="sign-button submit" type="submit">登录</button>
+                </div>
+            </form>
+            <p class="agreement-tip">二维码登录 社交账户登录</p>
+            <a class="signup-entry--org" href="https://www.zhihu.com/org/signup">注册机构号</a>
+            <button class="QRCode-toggleButton">
+                <span class="QRCode-toggleButtonText ">下载知乎 App</span>
+            </button>
+        </div>
+    </div>
+    <div class="footer">
+        <a target="_blank" href="https://zhuanlan.zhihu.com">知乎专栏</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="https://www.zhihu.com/roundtable">知乎圆桌</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="https://www.zhihu.com/explore" data-za-c="explore" data-za-a="visit_explore" data-za-l="home_bottom_explore">发现</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="https://www.zhihu.com/app">移动应用</a>
+        <span class="dot">·</span>
+        <a href="/contact" class="footer-mobile-show">联系我们</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="https://www.zhihu.com/careers">来知乎工作</a>
+        <br>
+        <span>© 2017 知乎</span>
+        <span class="dot">·</span>
+        <a href="http://www.miibeian.gov.cn/" target="_blank">京 ICP 证 110745 号</a>
+        <span class="dot">·</span>
+        <span>京公网安备 11010802010035 号</span>
+        <span class="dot">·</span>
+        <a href="http://zhstatic.zhihu.com/assets/zhihu/publish-license.jpg" target="_blank">出版物经营许可证</a>
+        <br>
+        <a target="_blank" href="https://zhuanlan.zhihu.com/p/28852607">侵权举报</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="http://www.12377.cn">网上有害信息举报专区</a>
+        <span class="dot">·</span>
+        <a target="_blank" href="https://www.zhihu.com/jubao">儿童色情信息举报专区</a>
+        <span class="dot">·</span>
+        <span>违法和不良信息举报：010-82716601</span>
+        <div class="chengxing">
+            <a id="___szfw_logo___" href="https://credit.szfw.org/CX20170607038331320388.html" target="_blank">
+                <img style="width: 138px;height: 26px" src="https://static.zhihu.com/static/revved/img/index/chengxing_logo@2x.65dc76e8.png" border="0">
+            </a>
+        </div>
+    </div>
+    <div class="hide-page hide"></div>
+    <div class="hide-index hide">
+        <div class="FeedbackForm">
+            <div class="FeedbackForm-title" >提交反馈</div>
+            <textarea placeholder="告诉我们你的建议或遇到的问题。" rows="3" class="FeedbackForm-inputBox-15yJ"></textarea>
+            <div class="FeedbackForm-screenShotLabel-2Sgh" data-zfeedback-fixed="1">屏幕截图（可选）:</div>
+            <div class="FeedbackForm-canvasContainer-mrde" style="min-height: 370.195px;"><canvas class="FeedbackForm-canvas-tSGI animations-fadeIn-1aFv"></canvas></div>
+            <div class="button-wrapper hide-button-wrapper">
+                <button class="sign-button submit" type="submit">提交</button>
+            </div>
+        </div>
+        <div class="hide-index-cancel"><i class="fa fa-arrow-right fa2" aria-hidden="true"></i></div>
+        <div style="clear: both"></div>
+    </div>
+
+</div>
+
+<div><button data-zfeedback-ignore="true" class="FeedbackButton-button-3waL" title="建议反馈"><i class="fa fa-comments fa1" aria-hidden="true" ></i></button></div>
+<script src="/static/jquery-1.12.4.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script>
+    $('.FeedbackButton-button-3waL').click(function () {
+        $('.hide-page,.hide-index').removeClass('hide')
+    });
+    $('.hide-index-cancel,.hide-button-wrapper').click(function () {
+        $('.hide-page,.hide-index').addClass('hide')
+    });
+
+    $('.login').click(function () {
+        $('.view-signup').addClass('hide');
+        $('.view-signup-b').removeClass('hide');
+
+    });
+    $('.active').click(function () {
+        $('.view-signup').removeClass('hide');
+        $('.view-signup-b').addClass('hide');
+
+    })
+</script>
+</body>
+</html>
